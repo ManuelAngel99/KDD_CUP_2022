@@ -1,3 +1,9 @@
+# Final model folder:
+The final model (used to achieve our score at the official competition website) is located under the following folder:
+```
+/archive/3A_FINAL_MODEL
+```
+
 # Setup guide
 
 1. Use the makefile to build the docker container and setup the project:
