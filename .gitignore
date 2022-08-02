@@ -1,0 +1,7 @@
+*.csv
+*.pkl
+*.pyc
+*.zip
+wandb/
+checkpoints/
+scoring_outputs/

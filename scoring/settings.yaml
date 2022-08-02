@@ -1,0 +1,28 @@
+script_settings:
+  REQUIRED_ENV_VARS: ["pred_file", "checkpoints", "start_col", "framework"]
+  SUPPORTED_FRAMEWORKS: ["base", "paddlepaddle", "pytorch", "tensorflow"]
+  LOGGER_LEVEL: "INFO"
+  MIN_NOISE_LEVEL: 0.001 # 0.1 %
+
+args:
+  test_data_path: "data/train_val_test/test/data_1.pkl"
+  model_path: "archive/forecast_persistence"
+  n_runs: 2048
+  seed: 1234
+  analyze_errors: True
+
+wandb:
+  project: "OUR_KDD_LEADERBOARD"
+  entity: team_houston_2022
+
+# The contents of envs will be passed to the model (alongside more variables) in a dictionary
+envs:
+  filename: wtbdata_245days.csv
+  location_filename: turb_location.csv
+  day_len: 144
+  capacity: 134
+  output_len: 288
+  out_var: 1
+  min_distinct_ratio: 0.1
+  min_non_zero_ratio: 0.5
+  is_debug: True
